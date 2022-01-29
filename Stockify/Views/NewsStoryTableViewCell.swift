@@ -18,6 +18,20 @@ class NewsStoryTableViewCell: UITableViewCell {
         let dateString: String
         let imageUrl: URL?
         
+        var headlineForUse: String {
+            
+            var components = headline.components(separatedBy: .whitespacesAndNewlines)
+            
+            if components.count >= 14 {
+                while components.count != 12 {
+                    components.removeLast()
+                }
+                return components.joined(separator: " ") + "..."
+            }
+            
+            return headline
+        }
+        
         init(model: NewsStory) {
             self.source = model.source
             self.headline = model.headline
@@ -34,7 +48,7 @@ class NewsStoryTableViewCell: UITableViewCell {
 
     private let headlineLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 22, weight: .regular)
+        label.font = .systemFont(ofSize: 18, weight: .regular)
         label.numberOfLines = 0
         return label
     }()
@@ -80,6 +94,8 @@ class NewsStoryTableViewCell: UITableViewCell {
         // image
         
         storyImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(12)
+            make.bottom.equalToSuperview().offset(-12)
             make.right.equalToSuperview().offset(-12)
             make.centerY.equalToSuperview()
             make.width.height.equalTo(120)
@@ -89,18 +105,19 @@ class NewsStoryTableViewCell: UITableViewCell {
         
         sourceLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(12)
-            make.top.equalTo(storyImageView.snp_topMargin)
+            make.top.equalToSuperview().offset(12)
         }
         
         headlineLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(12)
-            make.right.equalTo(storyImageView.snp_leftMargin).offset(-8)
             make.centerY.equalToSuperview()
+            make.right.equalTo(storyImageView.snp_leftMargin).offset(-22)
         }
         
         dateLabel.snp.makeConstraints { make in
+            make.top.equalTo(headlineLabel.snp_bottomMargin).offset(12)
             make.left.equalToSuperview().offset(12)
-            make.bottom.equalTo(storyImageView.snp_bottomMargin)
+            make.bottom.equalToSuperview().offset(-12)
         }
         
     }
@@ -113,7 +130,7 @@ class NewsStoryTableViewCell: UITableViewCell {
     //MARK: - Configuration
     
     public func configure(with viewModel: ViewModel) {
-        headlineLabel.text = viewModel.headline
+        headlineLabel.text = viewModel.headlineForUse
         sourceLabel.text = viewModel.source
         dateLabel.text = viewModel.dateString
         if let url = viewModel.imageUrl {

@@ -6,8 +6,27 @@
 //
 
 import UIKit
+import SafariServices
 
 class NewsViewController: UIViewController {
+    
+    enum ExModuleNews: Error, LocalizedError {
+        case failedToOpenStory
+        
+        var errorDescription: String? {
+            switch self {
+            case .failedToOpenStory:
+                return "Failed to open story"
+            }
+        }
+        
+        var errorBody: String? {
+            switch self {
+            case .failedToOpenStory:
+                return "Please try again later"
+            }
+        }
+    }
     
     enum TypeOfVC {
         case topStories
@@ -30,9 +49,13 @@ class NewsViewController: UIViewController {
         return tableView
     }()
     
-    private var stories: [NewsStory] = [
-    NewsStory(category: "tech", datetime: 200, headline: "Something should go here", id: 1, image: "", related: "related", source: "CBNC", summary: "", url: "")
-    ]
+    private var stories = [NewsStory]() {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
     
     private let type: TypeOfVC
         
@@ -51,6 +74,10 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
 
         configure()
+        fetchNews()
+        
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -69,11 +96,19 @@ class NewsViewController: UIViewController {
     }
     
     private func fetchNews() {
-        
+        APICaller.shared.news(for: type) { [weak self] result in
+            switch result {
+            case .success(let stories):
+                self?.stories = stories
+            case .failure(let e):
+                print(e)
+            }
+        }
     }
     
-    private func openUrl(url: URL?) {
-        
+    private func openUrl(url: URL) {
+        let vc = SFSafariViewController(url: url)
+        self.present(vc, animated: true, completion: nil)
     }
 
 }
@@ -90,9 +125,13 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: .init(model: stories[indexPath.row]))
         return cell
     }
-    
+ 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return NewsStoryTableViewCell.preferredHeight
+        return 166
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.layoutIfNeeded()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -114,6 +153,24 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // open story
+        let story = stories[indexPath.row]
+        
+        guard let url = URL(string: story.url) else {
+            abort(message: .failedToOpenStory)
+            return
+        }
+        
+        openUrl(url: url)
+        
+    }
+    
+}
+
+//MARK: - Alerts
+
+extension NewsViewController {
+    func abort(message: ExModuleNews) {
+        let alert = UIAlertController(title: message.localizedDescription, message: message.errorBody, preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
     }
 }
