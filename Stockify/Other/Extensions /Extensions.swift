@@ -8,6 +8,15 @@
 import Foundation
 import UIKit
 
+//MARK: - String
+
+extension String {
+    static func string(from timeinterval: TimeInterval) -> String {
+        let date = Date(timeIntervalSince1970: timeinterval)
+        return DateFormatter.prettyDateFormatter.string(from: date)
+    }
+}
+
 //MARK: - Date Formatter
 
 extension DateFormatter {
@@ -15,6 +24,12 @@ extension DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-dd"
         formatter.timeZone = .current
+        return formatter
+    }()
+    
+    static let prettyDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
         return formatter
     }()
 }

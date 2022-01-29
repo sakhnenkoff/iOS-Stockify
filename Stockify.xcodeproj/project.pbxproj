@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D742E8A327A199C300C86941 /* NewsStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742E8A227A199C300C86941 /* NewsStory.swift */; };
 		D742E8A527A53DCD00C86941 /* NewsStoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742E8A427A53DCD00C86941 /* NewsStoryTableViewCell.swift */; };
+		D742E8A827A54DC600C86941 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = D742E8A727A54DC600C86941 /* Nuke */; };
 		D78D2728279DD4B00034CA73 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D2727279DD4B00034CA73 /* Extensions.swift */; };
 		D78D272B279EC8BE0034CA73 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D78D272A279EC8BE0034CA73 /* SnapKit */; };
 		D78D272D279EC9630034CA73 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D272C279EC9630034CA73 /* SearchResultTableViewCell.swift */; };
@@ -59,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D742E8A827A54DC600C86941 /* Nuke in Frameworks */,
 				D78D272B279EC8BE0034CA73 /* SnapKit in Frameworks */,
 				D78D274327A078640034CA73 /* FloatingPanel in Frameworks */,
 			);
@@ -177,6 +179,7 @@
 			packageProductDependencies = (
 				D78D272A279EC8BE0034CA73 /* SnapKit */,
 				D78D274227A078640034CA73 /* FloatingPanel */,
+				D742E8A727A54DC600C86941 /* Nuke */,
 			);
 			productName = Stockify;
 			productReference = D7D991632799C054008DB35F /* Stockify.app */;
@@ -209,6 +212,7 @@
 			packageReferences = (
 				D78D2729279EC8BE0034CA73 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D78D274127A078640034CA73 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+				D742E8A627A54DC600C86941 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = D7D991642799C054008DB35F /* Products */;
 			projectDirPath = "";
@@ -468,6 +472,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D742E8A627A54DC600C86941 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.6.0;
+			};
+		};
 		D78D2729279EC8BE0034CA73 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -487,6 +499,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D742E8A727A54DC600C86941 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D742E8A627A54DC600C86941 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
 		D78D272A279EC8BE0034CA73 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D78D2729279EC8BE0034CA73 /* XCRemoteSwiftPackageReference "SnapKit" */;

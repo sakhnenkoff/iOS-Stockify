@@ -34,6 +34,7 @@ class WatchListViewController: UIViewController {
     private func configureFloatingPanel() {
         let vc = NewsViewController(type: .topStories)
         
+        
         let panel = FloatingPanelController(delegate: self)
         panel.surfaceView.appearance.cornerRadius = 14
         
