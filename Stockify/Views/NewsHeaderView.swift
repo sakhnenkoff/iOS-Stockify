@@ -13,7 +13,7 @@ class NewsHeaderView: UITableViewHeaderFooterView {
     public var didTapAddButton: (()->Void)?
     
     static let identifier = String(describing: NewsHeaderView.self)
-    static let preferdHeight: CGFloat = 70
+    static let preferredHeight: CGFloat = 70
     
     struct ViewModel {
         let title: String
@@ -55,12 +55,12 @@ class NewsHeaderView: UITableViewHeaderFooterView {
         
         label.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(12)
-            make.top.equalToSuperview().offset(4)
+            make.top.equalToSuperview().offset(8)
         }
         
         button.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-12)
-            make.top.equalToSuperview().offset(4)
+            make.top.equalToSuperview().offset(8)
             make.width.equalTo(120)
         }
     }

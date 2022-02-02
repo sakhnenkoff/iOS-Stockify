@@ -13,14 +13,28 @@ final class PersistenceManager {
     private let userDefaults: UserDefaults = .standard
     
     private struct Constants {
-        
+        static let onboardedKey = "hasOnboarded"
+        static let watchlistKey = "watchlist"
     }
     
     private init() {}
     
     //MARK: - Public
     
-    var watchList = [String]()
+    var watchList: [String] {
+        set {
+            if !hasOnboarded {
+                userDefaults.set(true, forKey: Constants.onboardedKey)
+                setUpDefaults()
+            }
+            
+            userDefaults.set(newValue, forKey: Constants.watchlistKey)
+        }
+        get {
+            let list = userDefaults.value(forKey: Constants.watchlistKey) as? [String]
+            return list ?? []
+        }
+    }
     
     public func addToWatchList() {
         
@@ -32,7 +46,38 @@ final class PersistenceManager {
     
     //MARK: - Private
     
-    private var hasOnboarded = false
+    private var hasOnboarded: Bool {
+        userDefaults.bool(forKey: Constants.onboardedKey)
+    }
     
+    public func setUpDefaults() {
+        
+        func setNameForKey(dic: [String:String]) {
+            dic.keys.map { $0 }
+            
+            for (symbol,name) in dic {
+                userDefaults.set(name, forKey: symbol)
+            }
+        }
+        
+        let map = [
+            "APPL":"Apple Inc",
+            "MSFT":"Microsoft Corporation",
+            "SNAP":"Snap Inc",
+            "GOOG":"Alphabet",
+            "AMZN":"Amazon.com Inc",
+            "WORK":"Slack Technologies",
+            "FB":"Meta Inc",
+            "NVDA":"Nvidia Inc",
+            "NKE":"Nike",
+            "PINS":"Pinterest Inc",
+        ]
+        setNameForKey(dic: map)
+    
+        if let symbols = Array(map.keys.map {$0}) as? [String] {
+            self.watchList = symbols
+        }
+    
+    }
     
 }

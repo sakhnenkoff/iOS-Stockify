@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import UserNotifications
+import FirebaseMessaging
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        
+        NotificationManager.shared.initializeNotificationServices()
+        NotificationManager.shared.configureFB()
         
         debug()
         
@@ -28,14 +35,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func debug() {
-        APICaller.shared.news(for: .company(symbol: "AAPL")) { result in
-            switch result {
-            case .success(let s):
-                print(s)
-            case .failure(let e):
-                print(e)
-            }
-        }
+      
     }
+    
+//    private func configureFirebaseNotifications() {
+//        FirebaseApp.configure()
+//
+//        Messaging.messaging().delegate = self
+//        UNUserNotificationCenter.current().delegate = self
+//
+//        requestForNotificationAuth()
+//    }
+//
+//    private func requestForNotificationAuth() {
+//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { status, error in
+//            guard status else { return }
+//            print("Success in APNS registry")
+//
+//            DispatchQueue.main.async {
+//                UIApplication.shared.registerForRemoteNotifications()
+//            }
+//        }
+//    }
 }
+
+//extension AppDelegate: MessagingDelegate, UNUserNotificationCenterDelegate {
+//    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+//        messaging.token { token, error in
+//            guard let token = token else { return }
+//
+//            print("Token: \(token)")
+//        }
+//    }
+//}
 

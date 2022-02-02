@@ -8,6 +8,7 @@
 import Foundation
 
 final class APICaller {
+    
     static let shared = APICaller()
     
     private struct Constants {
@@ -42,7 +43,21 @@ final class APICaller {
             ])
             request(url: url, expecting: [NewsStory].self, completion: completion)
         }
+    }
+    
+    public func marketData(symbol: String, numberOfDays: Int = 7, completion: @escaping (Result<MarketDataResponse, Error>) -> Void) {
+        let prior = Date().addingTimeInterval(-(Constants.day * Double(numberOfDays)))
+        let url = url(for: .marketData, queryParams: [
+            "symbol": symbol,
+            "resolution": "1",
+            "from" : "\(Int(prior.timeIntervalSince1970))",
+            "to" : "\(Int(Date().addingTimeInterval(-(Constants.day)).timeIntervalSince1970))",
+        ])
         
+        print(url)
+        
+        request(url: url
+                , expecting: MarketDataResponse.self, completion: completion)
     }
     
     //MARK: - Private
@@ -51,6 +66,7 @@ final class APICaller {
         case search
         case news
         case companyNews = "company-news"
+        case marketData = "stock/candle"
     }
     
     private enum APIErrors: Error {
@@ -77,7 +93,7 @@ final class APICaller {
         
         urlString += "?" + queryString
         
-        print(urlString)
+//        print(urlString)
         
         return URL(string: urlString)
     }

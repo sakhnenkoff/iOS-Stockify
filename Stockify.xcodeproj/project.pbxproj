@@ -10,13 +10,23 @@
 		D742E8A327A199C300C86941 /* NewsStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742E8A227A199C300C86941 /* NewsStory.swift */; };
 		D742E8A527A53DCD00C86941 /* NewsStoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742E8A427A53DCD00C86941 /* NewsStoryTableViewCell.swift */; };
 		D742E8A827A54DC600C86941 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = D742E8A727A54DC600C86941 /* Nuke */; };
+		D76DFC1927A94C49009ECEC6 /* MarketDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DFC1827A94C48009ECEC6 /* MarketDataResponse.swift */; };
+		D76DFC1B27A980AF009ECEC6 /* StockChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DFC1A27A980AE009ECEC6 /* StockChartView.swift */; };
+		D76DFC1D27A98126009ECEC6 /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DFC1C27A98126009ECEC6 /* WatchListTableViewCell.swift */; };
 		D78D2728279DD4B00034CA73 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D2727279DD4B00034CA73 /* Extensions.swift */; };
 		D78D272B279EC8BE0034CA73 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D78D272A279EC8BE0034CA73 /* SnapKit */; };
 		D78D272D279EC9630034CA73 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D272C279EC9630034CA73 /* SearchResultTableViewCell.swift */; };
 		D78D273C27A05B770034CA73 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D273B27A05B770034CA73 /* SearchResponse.swift */; };
 		D78D273E27A062BA0034CA73 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D273D27A062BA0034CA73 /* TitleView.swift */; };
-		D78D274027A076E60034CA73 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D273F27A076E50034CA73 /* PanelViewController.swift */; };
 		D78D274327A078640034CA73 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = D78D274227A078640034CA73 /* FloatingPanel */; };
+		D7AD4FEC27A6ABB900FB2BC9 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = D7AD4FEB27A6ABB900FB2BC9 /* Cosmos */; };
+		D7AD4FEF27A6AFE200FB2BC9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7AD4FEE27A6AFE200FB2BC9 /* FirebaseAnalytics */; };
+		D7AD4FF127A6AFE200FB2BC9 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = D7AD4FF027A6AFE200FB2BC9 /* FirebaseDynamicLinks */; };
+		D7AD4FF327A6AFE200FB2BC9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D7AD4FF227A6AFE200FB2BC9 /* FirebaseFirestore */; };
+		D7AD4FF527A6AFE200FB2BC9 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D7AD4FF427A6AFE200FB2BC9 /* FirebaseInAppMessaging-Beta */; };
+		D7AD4FF727A6AFE200FB2BC9 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D7AD4FF627A6AFE200FB2BC9 /* FirebaseInAppMessagingSwift-Beta */; };
+		D7AD4FF927A6AFE200FB2BC9 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D7AD4FF827A6AFE200FB2BC9 /* FirebaseMessaging */; };
+		D7AD4FFC27A6C00D00FB2BC9 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD4FFB27A6C00D00FB2BC9 /* NotificationManager.swift */; };
 		D7BA2A0E27A1888A00B34834 /* NewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA2A0D27A1888A00B34834 /* NewsHeaderView.swift */; };
 		D7D991672799C054008DB35F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D991662799C054008DB35F /* AppDelegate.swift */; };
 		D7D991692799C054008DB35F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D991682799C054008DB35F /* SceneDelegate.swift */; };
@@ -29,16 +39,20 @@
 		D7D991862799C2F5008DB35F /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D991852799C2F5008DB35F /* APICaller.swift */; };
 		D7D991882799C312008DB35F /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D991872799C312008DB35F /* PersistenceManager.swift */; };
 		D7D9918A2799C323008DB35F /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D991892799C323008DB35F /* HapticsManager.swift */; };
+		D7D9B1AF27A6A88500C17CDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7D9B1AE27A6A88500C17CDC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D742E8A227A199C300C86941 /* NewsStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStory.swift; sourceTree = "<group>"; };
 		D742E8A427A53DCD00C86941 /* NewsStoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStoryTableViewCell.swift; sourceTree = "<group>"; };
+		D76DFC1827A94C48009ECEC6 /* MarketDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataResponse.swift; sourceTree = "<group>"; };
+		D76DFC1A27A980AE009ECEC6 /* StockChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockChartView.swift; sourceTree = "<group>"; };
+		D76DFC1C27A98126009ECEC6 /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
 		D78D2727279DD4B00034CA73 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D78D272C279EC9630034CA73 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		D78D273B27A05B770034CA73 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		D78D273D27A062BA0034CA73 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		D78D273F27A076E50034CA73 /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
+		D7AD4FFB27A6C00D00FB2BC9 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		D7BA2A0D27A1888A00B34834 /* NewsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeaderView.swift; sourceTree = "<group>"; };
 		D7D991632799C054008DB35F /* Stockify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D991662799C054008DB35F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +67,8 @@
 		D7D991852799C2F5008DB35F /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		D7D991872799C312008DB35F /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		D7D991892799C323008DB35F /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		D7D9B1AD27A6A75300C17CDC /* Stockify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stockify.entitlements; sourceTree = "<group>"; };
+		D7D9B1AE27A6A88500C17CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +78,14 @@
 			files = (
 				D742E8A827A54DC600C86941 /* Nuke in Frameworks */,
 				D78D272B279EC8BE0034CA73 /* SnapKit in Frameworks */,
+				D7AD4FF927A6AFE200FB2BC9 /* FirebaseMessaging in Frameworks */,
+				D7AD4FEC27A6ABB900FB2BC9 /* Cosmos in Frameworks */,
+				D7AD4FF527A6AFE200FB2BC9 /* FirebaseInAppMessaging-Beta in Frameworks */,
+				D7AD4FEF27A6AFE200FB2BC9 /* FirebaseAnalytics in Frameworks */,
 				D78D274327A078640034CA73 /* FloatingPanel in Frameworks */,
+				D7AD4FF127A6AFE200FB2BC9 /* FirebaseDynamicLinks in Frameworks */,
+				D7AD4FF727A6AFE200FB2BC9 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				D7AD4FF327A6AFE200FB2BC9 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +119,14 @@
 		D7D991652799C054008DB35F /* Stockify */ = {
 			isa = PBXGroup;
 			children = (
+				D7D9B1AD27A6A75300C17CDC /* Stockify.entitlements */,
 				D7D9917A2799C084008DB35F /* Models */,
 				D7D9917D2799C0A7008DB35F /* Managers */,
 				D7D9917C2799C095008DB35F /* Controllers */,
 				D7D9917B2799C08F008DB35F /* Views */,
 				D7D9917E2799C0B6008DB35F /* Other */,
 				D7D991742799C057008DB35F /* Info.plist */,
+				D7D9B1AE27A6A88500C17CDC /* GoogleService-Info.plist */,
 			);
 			path = Stockify;
 			sourceTree = "<group>";
@@ -111,6 +136,7 @@
 			children = (
 				D78D273B27A05B770034CA73 /* SearchResponse.swift */,
 				D742E8A227A199C300C86941 /* NewsStory.swift */,
+				D76DFC1827A94C48009ECEC6 /* MarketDataResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +149,8 @@
 				D78D273D27A062BA0034CA73 /* TitleView.swift */,
 				D7BA2A0D27A1888A00B34834 /* NewsHeaderView.swift */,
 				D742E8A427A53DCD00C86941 /* NewsStoryTableViewCell.swift */,
+				D76DFC1A27A980AE009ECEC6 /* StockChartView.swift */,
+				D76DFC1C27A98126009ECEC6 /* WatchListTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,7 +162,6 @@
 				D7D9917F2799C193008DB35F /* NewsViewController.swift */,
 				D7D991812799C1A6008DB35F /* SearchResultsViewController.swift */,
 				D7D991832799C1C4008DB35F /* StockDetailsViewController.swift */,
-				D78D273F27A076E50034CA73 /* PanelViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -145,6 +172,7 @@
 				D7D991852799C2F5008DB35F /* APICaller.swift */,
 				D7D991872799C312008DB35F /* PersistenceManager.swift */,
 				D7D991892799C323008DB35F /* HapticsManager.swift */,
+				D7AD4FFB27A6C00D00FB2BC9 /* NotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -180,6 +208,13 @@
 				D78D272A279EC8BE0034CA73 /* SnapKit */,
 				D78D274227A078640034CA73 /* FloatingPanel */,
 				D742E8A727A54DC600C86941 /* Nuke */,
+				D7AD4FEB27A6ABB900FB2BC9 /* Cosmos */,
+				D7AD4FEE27A6AFE200FB2BC9 /* FirebaseAnalytics */,
+				D7AD4FF027A6AFE200FB2BC9 /* FirebaseDynamicLinks */,
+				D7AD4FF227A6AFE200FB2BC9 /* FirebaseFirestore */,
+				D7AD4FF427A6AFE200FB2BC9 /* FirebaseInAppMessaging-Beta */,
+				D7AD4FF627A6AFE200FB2BC9 /* FirebaseInAppMessagingSwift-Beta */,
+				D7AD4FF827A6AFE200FB2BC9 /* FirebaseMessaging */,
 			);
 			productName = Stockify;
 			productReference = D7D991632799C054008DB35F /* Stockify.app */;
@@ -213,6 +248,8 @@
 				D78D2729279EC8BE0034CA73 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D78D274127A078640034CA73 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 				D742E8A627A54DC600C86941 /* XCRemoteSwiftPackageReference "Nuke" */,
+				D7AD4FEA27A6ABB900FB2BC9 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				D7AD4FED27A6AFE200FB2BC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = D7D991642799C054008DB35F /* Products */;
 			projectDirPath = "";
@@ -229,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7D991732799C057008DB35F /* LaunchScreen.storyboard in Resources */,
+				D7D9B1AF27A6A88500C17CDC /* GoogleService-Info.plist in Resources */,
 				D7D991702799C057008DB35F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,13 +279,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7D9918A2799C323008DB35F /* HapticsManager.swift in Sources */,
+				D76DFC1D27A98126009ECEC6 /* WatchListTableViewCell.swift in Sources */,
+				D7AD4FFC27A6C00D00FB2BC9 /* NotificationManager.swift in Sources */,
+				D76DFC1927A94C49009ECEC6 /* MarketDataResponse.swift in Sources */,
 				D78D272D279EC9630034CA73 /* SearchResultTableViewCell.swift in Sources */,
 				D7D991842799C1C4008DB35F /* StockDetailsViewController.swift in Sources */,
 				D7D9916B2799C054008DB35F /* WatchListViewController.swift in Sources */,
 				D7D991802799C193008DB35F /* NewsViewController.swift in Sources */,
 				D7D991882799C312008DB35F /* PersistenceManager.swift in Sources */,
 				D78D2728279DD4B00034CA73 /* Extensions.swift in Sources */,
-				D78D274027A076E60034CA73 /* PanelViewController.swift in Sources */,
+				D76DFC1B27A980AF009ECEC6 /* StockChartView.swift in Sources */,
 				D742E8A327A199C300C86941 /* NewsStory.swift in Sources */,
 				D7D991862799C2F5008DB35F /* APICaller.swift in Sources */,
 				D78D273C27A05B770034CA73 /* SearchResponse.swift in Sources */,
@@ -395,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Stockify/Stockify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C5N8H89WX7;
@@ -424,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Stockify/Stockify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C5N8H89WX7;
@@ -496,6 +539,23 @@
 				minimumVersion = 2.5.0;
 			};
 		};
+		D7AD4FEA27A6ABB900FB2BC9 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D7AD4FED27A6AFE200FB2BC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 9.0.0;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -513,6 +573,41 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D78D274127A078640034CA73 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
 			productName = FloatingPanel;
+		};
+		D7AD4FEB27A6ABB900FB2BC9 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7AD4FEA27A6ABB900FB2BC9 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+		D7AD4FEE27A6AFE200FB2BC9 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7AD4FED27A6AFE200FB2BC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D7AD4FF027A6AFE200FB2BC9 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7AD4FED27A6AFE200FB2BC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		D7AD4FF227A6AFE200FB2BC9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7AD4FED27A6AFE200FB2BC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		D7AD4FF427A6AFE200FB2BC9 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7AD4FED27A6AFE200FB2BC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		D7AD4FF627A6AFE200FB2BC9 /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7AD4FED27A6AFE200FB2BC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		D7AD4FF827A6AFE200FB2BC9 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7AD4FED27A6AFE200FB2BC9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

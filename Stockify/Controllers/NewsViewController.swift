@@ -75,9 +75,6 @@ class NewsViewController: UIViewController {
 
         configure()
         fetchNews()
-        
-        
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -147,7 +144,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return NewsHeaderView.preferdHeight
+        return NewsHeaderView.preferredHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
