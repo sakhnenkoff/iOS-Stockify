@@ -74,6 +74,9 @@ class NewsHeaderView: UITableViewHeaderFooterView {
     
     @objc private func didTapButton() {
         didTapAddButton?()
+        
+        button.isUserInteractionEnabled = false
+        button.alpha = 0.5
     }
     
     //MARK: - Configuration

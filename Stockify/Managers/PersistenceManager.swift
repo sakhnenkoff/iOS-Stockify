@@ -87,4 +87,8 @@ final class PersistenceManager {
     
     }
     
+    public func watchlistContains(symbol: String) -> Bool {
+        return watchList.contains(symbol)
+    }
+    
 }
