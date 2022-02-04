@@ -36,12 +36,15 @@ final class PersistenceManager {
         }
     }
     
-    public func addToWatchList() {
-        
+    public func addToWatchList(symbol: String, companyName: String) {
+        setCompany(company: companyName, symbol: symbol)
+        watchList.append(symbol)
+        NotificationCenter.default.post(name: .didAddToWatchlist, object: nil)
     }
     
-    public func removeFromWatchList() {
-        
+    public func removeFromWatchList(symbol: String) {
+        let filteredList = watchList.filter {$0 != symbol}
+        watchList = filteredList
     }
     
     //MARK: - Private
@@ -50,9 +53,13 @@ final class PersistenceManager {
         userDefaults.bool(forKey: Constants.onboardedKey)
     }
     
+    private func setCompany(company: String, symbol: String) {
+        userDefaults.set(company, forKey: symbol)
+    }
+    
     public func setUpDefaults() {
         
-        func setNameForKey(dic: [String:String]) {
+        func setNameForKey(dic: [String : String]) {
             dic.keys.map { $0 }
             
             for (symbol,name) in dic {

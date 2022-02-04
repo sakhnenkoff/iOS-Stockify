@@ -7,6 +7,53 @@
 
 import Foundation
 import UIKit
+import SnapKit
+
+
+//MARK: - Notification
+
+extension Notification.Name {
+    static let didAddToWatchlist = Notification.Name("didAddToWatchList")
+}
+
+//MARK: - UIStackView
+
+extension UIStackView {
+    static func simpleStack(axis: NSLayoutConstraint.Axis, spacing: CGFloat, alignment: UIStackView.Alignment = .center, distribution: Distribution) -> UIStackView {
+        let stack = UIStackView()
+        stack.axis = axis
+        stack.spacing = spacing
+        stack.alignment = alignment
+        stack.distribution = distribution
+        return stack
+    }
+    
+    public func addArrangedSubview(views: UIView...) {
+        views.forEach { view in
+            self.addArrangedSubview(view)
+        }
+    }
+}
+
+//MARK: - NumberFormatter
+
+extension NumberFormatter {
+    static let percentFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = .current
+        formatter.numberStyle = .percent
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }()
+    
+    static let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = .current
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }()
+}
 
 //MARK: - String
 
@@ -14,6 +61,15 @@ extension String {
     static func string(from timeinterval: TimeInterval) -> String {
         let date = Date(timeIntervalSince1970: timeinterval)
         return DateFormatter.prettyDateFormatter.string(from: date)
+    }
+    static func percentage(from double: Double) -> String {
+        let formatter = NumberFormatter.percentFormatter
+        return formatter.string(from: NSNumber(value: double)) ?? "\(double)"
+    }
+    
+    static func formatter(number: Double) -> String {
+        let formatter = NumberFormatter.numberFormatter
+        return formatter.string(from: NSNumber(value: number)) ?? "\(number)"
     }
 }
 
@@ -53,4 +109,10 @@ extension UIView {
     var right: CGFloat { left + width }
     var top: CGFloat { frame.origin.y }
     var bottom: CGFloat { frame.origin.y + height }
+    
+    func setWidth(width: CGFloat) {
+        self.snp.updateConstraints { make in
+            make.width.equalTo(width)
+        }
+    }
 }

@@ -13,6 +13,7 @@
 		D76DFC1927A94C49009ECEC6 /* MarketDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DFC1827A94C48009ECEC6 /* MarketDataResponse.swift */; };
 		D76DFC1B27A980AF009ECEC6 /* StockChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DFC1A27A980AE009ECEC6 /* StockChartView.swift */; };
 		D76DFC1D27A98126009ECEC6 /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DFC1C27A98126009ECEC6 /* WatchListTableViewCell.swift */; };
+		D76DFC1E27AD5C72009ECEC6 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9916A2799C054008DB35F /* WatchListViewController.swift */; };
 		D78D2728279DD4B00034CA73 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D2727279DD4B00034CA73 /* Extensions.swift */; };
 		D78D272B279EC8BE0034CA73 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D78D272A279EC8BE0034CA73 /* SnapKit */; };
 		D78D272D279EC9630034CA73 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D272C279EC9630034CA73 /* SearchResultTableViewCell.swift */; };
@@ -30,7 +31,6 @@
 		D7BA2A0E27A1888A00B34834 /* NewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA2A0D27A1888A00B34834 /* NewsHeaderView.swift */; };
 		D7D991672799C054008DB35F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D991662799C054008DB35F /* AppDelegate.swift */; };
 		D7D991692799C054008DB35F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D991682799C054008DB35F /* SceneDelegate.swift */; };
-		D7D9916B2799C054008DB35F /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9916A2799C054008DB35F /* WatchListViewController.swift */; };
 		D7D991702799C057008DB35F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D9916F2799C057008DB35F /* Assets.xcassets */; };
 		D7D991732799C057008DB35F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D991712799C057008DB35F /* LaunchScreen.storyboard */; };
 		D7D991802799C193008DB35F /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9917F2799C193008DB35F /* NewsViewController.swift */; };
@@ -284,7 +284,6 @@
 				D76DFC1927A94C49009ECEC6 /* MarketDataResponse.swift in Sources */,
 				D78D272D279EC9630034CA73 /* SearchResultTableViewCell.swift in Sources */,
 				D7D991842799C1C4008DB35F /* StockDetailsViewController.swift in Sources */,
-				D7D9916B2799C054008DB35F /* WatchListViewController.swift in Sources */,
 				D7D991802799C193008DB35F /* NewsViewController.swift in Sources */,
 				D7D991882799C312008DB35F /* PersistenceManager.swift in Sources */,
 				D78D2728279DD4B00034CA73 /* Extensions.swift in Sources */,
@@ -297,6 +296,7 @@
 				D742E8A527A53DCD00C86941 /* NewsStoryTableViewCell.swift in Sources */,
 				D7D991692799C054008DB35F /* SceneDelegate.swift in Sources */,
 				D78D273E27A062BA0034CA73 /* TitleView.swift in Sources */,
+				D76DFC1E27AD5C72009ECEC6 /* WatchListViewController.swift in Sources */,
 				D7D991822799C1A6008DB35F /* SearchResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

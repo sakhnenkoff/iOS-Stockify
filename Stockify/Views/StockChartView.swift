@@ -7,6 +7,12 @@
 
 import UIKit
 
+struct StockChartViewModel {
+    let date: [Double]
+    let showLegend: Bool
+    let showAxis: Bool
+}
+
 class StockChartView: UIView {
     
     override init(frame: CGRect) {
@@ -25,6 +31,10 @@ class StockChartView: UIView {
     
     public func reset() {
             
+    }
+    
+    public func configure(with model: StockChartViewModel) {
+        
     }
     
 }
